@@ -1,12 +1,4 @@
 [[package]]
-name = "GTKonfig"
-version = "0.1.0"
-dependencies = [
- "gtk 0.6.0 (git+https://github.com/gtk-rs/gtk.git)",
- "ncurses 5.99.0 (git+https://github.com/jeaye/ncurses-rs)",
-]
-
-[[package]]
 name = "atk"
 version = "0.6.0"
 source = "git+https://github.com/gtk-rs/atk#8ce82f5b0774683e84151ae10822086b1457c526"
@@ -227,6 +219,14 @@ dependencies = [
  "libc 0.2.50 (registry+https://github.com/rust-lang/crates.io-index)",
  "pango-sys 0.8.0 (git+https://github.com/gtk-rs/sys)",
  "pkg-config 0.3.14 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "gtkonfig_rs"
+version = "0.1.0"
+dependencies = [
+ "gtk 0.6.0 (git+https://github.com/gtk-rs/gtk.git)",
+ "ncurses 5.99.0 (git+https://github.com/jeaye/ncurses-rs)",
 ]
 
 [[package]]
