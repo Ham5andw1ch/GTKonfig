@@ -2,6 +2,8 @@
 name = "GTKonfig"
 version = "0.1.0"
 authors = ["igniscyan <bwclark97@ufl.edu>"]
-edition = "2019"
+edition = "2018"
 
 [dependencies]
+gtk = { git = "https://github.com/gtk-rs/gtk.git" } 
+ncurses = { git = "https://github.com/jeaye/ncurses-rs" }
