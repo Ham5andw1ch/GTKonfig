@@ -1,5 +1,5 @@
 [package]
-name = "GTKonfig"
+name = "gtkonfig_rs"
 version = "0.1.0"
 authors = ["igniscyan <bwclark97@ufl.edu>"]
 edition = "2018"
