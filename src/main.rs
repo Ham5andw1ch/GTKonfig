@@ -4,8 +4,12 @@ extern crate gio;
 // To import all needed traits.
 use gtk::prelude::*;
 use gio::prelude::*;
-
 use std::env;
+
+fn lmao(){
+    println!("Lmao");
+}
+
 
 fn main() {
     let uiapp = gtk::Application::new(Some("org.gtkrsnotes.demo"), gio::ApplicationFlags::FLAGS_NONE) .expect("Application::new failed");
@@ -16,7 +20,12 @@ fn main() {
         // Then we set its size and a title.
         win.set_default_size(320, 200);
         win.set_title("Basic example");
-
+        lmao();
+        let but = gtk::Button::new_with_label("Click me");
+        but.connect_clicked(|_| {lmao();});
+        let bbox = gtk::ButtonBox::new(gtk::Orientation::Horizontal);
+        bbox.add(&but);
+        win.add(&bbox);
         // Don't forget to make all widgets visible.
         win.show_all();
     });
