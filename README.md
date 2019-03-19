@@ -7,14 +7,14 @@ Provide an easier interface for beginner users to "rice" Linux. With GTKonfig, u
 On the backend, dotfiles will be stored similary to the way [wpgtk]:https://github.com/deviantfero/wpgtk handles them, with .base being generated for each program. A second file will also be included that defines both variables and the respective gui widgets that control them. 
 
 ## Todo
-*Create Symlinks
-*Create file structure to build UI on the fly
-*Use UI to edit symlinked files
-*Create script to autoadd supported programs
+* Create Symlinks
+* Create file structure to build UI on the fly
+* Use UI to edit symlinked files
+* Create script to autoadd supported programs
 
 ## Possibilities
-*NCurses UI
-*Repos to store popular programs
+* NCurses UI
+* Repos to store popular programs
 
 ## Building
 Run `cargo build` to build and `cargo run` to run. We have not yet made a makefile to install the binaries to path.
