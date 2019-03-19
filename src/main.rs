@@ -19,26 +19,48 @@ fn main() {
 
         // Then we set its size and a title.
         win.set_default_size(320, 200);
+        win.set_property_window_position(gtk::WindowPosition::Center);
         win.set_title("Basic example");
+        win.set_border_width(10);
         lmao();
-        let but1 = gtk::Button::new_with_label("Click me");
-        but1.connect_clicked(|_| {lmao();});
-        let but2 = gtk::Button::new_with_label("Click me 2");
-        but2.connect_clicked(|_| {lmao();});
-        //let bbox = gtk::ButtonBox::new(gtk::Orientation::Horizontal);
+        
+        //Create a box
+        let notebox = gtk::Box::new(gtk::Orientation::Horizontal, 5);
+        win.add(&notebox);
+        
+        let mynote = gtk::Notebook::new();
+
+        let mybox = gtk::Box::new(gtk::Orientation::Horizontal, 5);
+        win.add(&mybox);
+
+        //Add page to notebook
+        let label = gtk::Label::new(Some("Test"));
+        mynote.append_page(&mybox, Some(&label));
+        
+        //Create Stack
         let page_stack = gtk::Stack::new();
-        let scroll = gtk::ScrolledWindow::new(gtk::NONE_ADJUSTMENT, gtk::NONE_ADJUSTMENT );
         page_stack.set_border_width(6);
         page_stack.set_vexpand(true);
         page_stack.set_hexpand(true);
-        scroll.add(&but1);
-        page_stack.add_titled(&scroll, "P1", "P1");
+
+        //Create Buttons
+        let but1 = gtk::Button::new_with_label("Click me");
+        but1.connect_clicked(|_| {lmao();});
+        
+        let but2 = gtk::Button::new_with_label("Click me 2");
+        but2.connect_clicked(|_| {lmao();});
+        
+        page_stack.add_titled(&but1, "P1", "P1");
         page_stack.add_titled(&but2, "P2", "P2");
-        let note = gtk::StackSwitcher::new();
-        note.set_stack(Some(&page_stack));
-        //bbox.add(&but);
-        //win.add(&bbox);
-        win.add(&note);
+        
+        //Switcher
+        let note = gtk::StackSidebar::new();
+        note.set_stack(&page_stack);
+        
+        notebox.pack_start(&mynote, true, true, 0);
+        notebox.pack_start(&mybox, true, true, 0);
+        mybox.pack_start(&note, true, true, 0);
+        mybox.pack_start(&page_stack, true, true, 0);
         // Don't forget to make all widgets visible.
         win.show_all();
     });
