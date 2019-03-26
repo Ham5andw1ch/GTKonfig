@@ -5,7 +5,7 @@ extern crate gio;
 use gtk::prelude::*;
 use gio::prelude::*;
 use std::env;
-
+mod create_and_link; 
 fn lmao(){
     println!("Lmao");
 }
@@ -63,6 +63,9 @@ fn main() {
         mybox.pack_start(&page_stack, true, true, 0);
         // Don't forget to make all widgets visible.
         win.show_all();
+        let test_path: Path
+        create_base_sym()
     });
     uiapp.run(&env::args().collect::<Vec<_>>());
+
 }

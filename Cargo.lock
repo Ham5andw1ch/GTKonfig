@@ -231,6 +231,7 @@ dependencies = [
  "glib 0.7.0 (git+https://github.com/gtk-rs/glib)",
  "gtk 0.6.0 (git+https://github.com/gtk-rs/gtk)",
  "ncurses 5.99.0 (git+https://github.com/jeaye/ncurses-rs)",
+ "symlink 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
@@ -284,6 +285,11 @@ version = "0.3.14"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
+name = "symlink"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+
+[[package]]
 name = "winapi"
 version = "0.3.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -327,6 +333,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 "checksum pango 0.6.0 (git+https://github.com/gtk-rs/pango)" = "<none>"
 "checksum pango-sys 0.8.0 (git+https://github.com/gtk-rs/sys)" = "<none>"
 "checksum pkg-config 0.3.14 (registry+https://github.com/rust-lang/crates.io-index)" = "676e8eb2b1b4c9043511a9b7bea0915320d7e502b0a079fb03f9635a5252b18c"
+"checksum symlink 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)" = "a7973cce6668464ea31f176d85b13c7ab3bba2cb3b77a2ed26abd7801688010a"
 "checksum winapi 0.3.6 (registry+https://github.com/rust-lang/crates.io-index)" = "92c1eb33641e276cfa214a0522acad57be5c56b10cb348b3c5117db75f3ac4b0"
 "checksum winapi-i686-pc-windows-gnu 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)" = "ac3b87c63620426dd9b991e5ce0329eff545bccbbb34f3be09ff6fb6ab51b7b6"
 "checksum winapi-x86_64-pc-windows-gnu 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)" = "712e227841d057c1ee1cd2fb22fa7e5a5461ae8e48fa2ca79ec42cfc1931183f"
